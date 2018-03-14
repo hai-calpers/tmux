@@ -1,9 +1,11 @@
 #!/bin/bash
 
+# Remove existing folder 
+# rm -Rf ~/.tmux
+
 # Copy files to your profile
 cp -Rf .tmux ~/
-cp .tmux.conf.local ~/
-
+cp -f .tmux.conf.local ~/
 
 # Check if the file exist
 # Create a soft link so that it would pick it up.
