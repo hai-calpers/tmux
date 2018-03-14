@@ -1,6 +1,11 @@
 #!/bin/bash
-# Check if the file exist
 
+# Copy files to your profile
+cp -Rf .tmux ~/
+cp .tmux.conf.local ~/
+
+
+# Check if the file exist
 # Create a soft link so that it would pick it up.
 if [ -e ~/.tmux/.tmux.conf ]
 then
