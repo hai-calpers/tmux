@@ -12,7 +12,7 @@ cp -f .tmux.conf.local ~/
 if [ -e ~/.tmux/.tmux.conf ]
 then
     # then create symlink
-    ln -s -f ~/.tmux.conf ~/.tmux/.tmux.conf
+    ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf
 fi
 
 # Have to set tmp directory to user profile instead of system wide /tmp
