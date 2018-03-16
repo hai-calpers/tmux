@@ -60,12 +60,16 @@ tmux_conf_theme_focused_pane_bg='default'               # changes the color of t
 # pane border style, possible values are:
 #   - thin (default)
 #   - fat
-tmux_conf_theme_pane_border_style=fat
+tmux_conf_theme_pane_border_style=thin
 
 # pane borders colours:
 tmux_conf_theme_pane_border='#F1FAEE'                   # honeydew
 #tmux_conf_theme_pane_border='#111111'                   # honeydew
-tmux_conf_theme_pane_active_border='#A8DADC'            # light blue 
+#tmux_conf_theme_pane_active_border='#33FFBD'            # bright teal
+tmux_conf_theme_pane_active_border='#75FF33'            # bright green
+#tmux_conf_theme_pane_active_border='#FF5733'            # bright red
+#tmux_conf_theme_pane_active_border='#FFBD33'            # bright orange
+#tmux_conf_theme_pane_active_border='#A8DADC'            # light blue 
 #tmux_conf_theme_pane_active_border='#222222'            # light blue 
 
 # pane indicator colours
@@ -73,8 +77,10 @@ tmux_conf_theme_pane_indicator='#f1faee'                # honeydew
 tmux_conf_theme_pane_active_indicator='#a8dadc'         # light blue
 
 # status line style
-tmux_conf_theme_message_fg='#F1FAEE'                    # honeydew
-tmux_conf_theme_message_bg='#457B9D'                    # queen blue
+#tmux_conf_theme_message_fg='#F1FAEE'                    # honeydew
+tmux_conf_theme_message_bg='#FFA500'                    # honeydew
+#tmux_conf_theme_message_bg='#457B9D'                    # queen blue
+tmux_conf_theme_message_fg='#000000'                    # queen blue
 tmux_conf_theme_message_attr='bold'
 
 # status line command style (<prefix> : Escape)
@@ -106,7 +112,8 @@ tmux_conf_theme_window_status_format=' #I #W '
 #   - built-in variables are:
 #     - #{circled_window_index}
 tmux_conf_theme_window_status_current_fg='#F1FAEE'      # honeydew
-tmux_conf_theme_window_status_current_bg='#457B9D'      # queen blue 
+tmux_conf_theme_window_status_current_bg='#164d99'      # queen blue 
+#tmux_conf_theme_window_status_current_bg='#457B9D'      # queen blue 
 tmux_conf_theme_window_status_current_attr='bold'
 tmux_conf_theme_window_status_current_format='#I #W'
 #tmux_conf_theme_window_status_current_format='#{circled_window_index} #W'
@@ -123,7 +130,7 @@ tmux_conf_theme_window_status_bell_bg='default'
 tmux_conf_theme_window_status_bell_attr='blink,bold'
 
 # window last status style
-tmux_conf_theme_window_status_last_fg='#F9C54A'         # yellow
+tmux_conf_theme_window_status_last_fg='#164d99'         # green
 tmux_conf_theme_window_status_last_bg='#000000'
 tmux_conf_theme_window_status_last_attr='bold'
 
@@ -163,13 +170,15 @@ tmux_conf_theme_status_left=' #S | ↑#{?uptime_d, #{uptime_d}d,} '
 tmux_conf_theme_status_right='#{prefix}#{pairing} , %r , %b %d | #{username}#{root} | #{hostname} '
 
 # status left style
-tmux_conf_theme_status_left_fg='#ffffff,#153a6d,#ffffff'  # white, black, white
+tmux_conf_theme_status_left_fg='#ffffff,#777777,#ffffff'  # white, black, white
+#tmux_conf_theme_status_left_bg='#75ff33,#f1faee,#ffffff'  # bright green, light gray, white
 tmux_conf_theme_status_left_bg='#4f772d,#f1faee,#ffffff'  # green, light gray, white
 tmux_conf_theme_status_left_attr='bold,none,none'
 
 # status right style
 tmux_conf_theme_status_right_fg='#ffffff,#000000,#ffffff' # light gray, black, white
-tmux_conf_theme_status_right_bg='#727573,#a8dadc,#164d99' # gray, honeydew, dark blue
+#tmux_conf_theme_status_right_bg='#000000,#a8dadc,#164d99' # gray, honeydew, dark blue
+tmux_conf_theme_status_right_bg='#000000,#457b9d,#164d99' # gray, honeydew, dark blue
 tmux_conf_theme_status_right_attr='none,none,bold'
 
 # pairing indicator
@@ -182,7 +191,8 @@ tmux_conf_theme_pairing_attr='none'
 # prefix indicator
 #tmux_conf_theme_prefix='⌨'            # U+2328
 tmux_conf_theme_prefix=' PREFIX'            # U+2328
-tmux_conf_theme_prefix_fg='#f9c54A'
+#tmux_conf_theme_prefix_fg='#f9c54A'
+tmux_conf_theme_prefix_fg='#ffa500'
 tmux_conf_theme_prefix_bg='none'
 tmux_conf_theme_prefix_attr='blink'
 
@@ -288,7 +298,7 @@ bind -r M-l next-window     # select next window
 bind M select-pane -m
 
 # Switch to last session
-bind Space switch-client -l
+bind Space switch-client -l 
 
 ## Create a new window with the current pane
 bind-key y join-pane -s !
@@ -299,7 +309,7 @@ bind-key -n MouseDown3Pane paste-buffer
 bind-key -n MouseDown3Status command-prompt -I "#W" "rename-window '%%'"
 
 # Run the plugins to expand the functionality.
-run-shell ~/.tmux/tmux_plugins/tmux-resurrect/resurrect.tmux
+run-shell ~/.tmux/tmux-resurrect/resurrect.tmux
 run-shell ~/.tmux/tmux-sessionist/sessionist.tmux
 run-shell ~/.tmux/tmux-copycat/copycat.tmux
 
