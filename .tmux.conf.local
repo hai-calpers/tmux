@@ -78,14 +78,14 @@ tmux_conf_theme_pane_active_indicator='#a8dadc'         # light blue
 
 # status line style
 #tmux_conf_theme_message_fg='#F1FAEE'                    # honeydew
-tmux_conf_theme_message_bg='#FFA500'                    # honeydew
+tmux_conf_theme_message_bg='#FFA500'                    # orange
 #tmux_conf_theme_message_bg='#457B9D'                    # queen blue
 tmux_conf_theme_message_fg='#000000'                    # queen blue
 tmux_conf_theme_message_attr='bold'
 
 # status line command style (<prefix> : Escape)
-tmux_conf_theme_message_command_fg='#F1FAEE'            # queen blue
-tmux_conf_theme_message_command_bg='#457B9D'            # light blue
+tmux_conf_theme_message_command_fg='#000000'            # queen blue
+tmux_conf_theme_message_command_bg='#FF409D'            # light purple
 tmux_conf_theme_message_command_attr='bold'
 
 # window modes style
@@ -130,7 +130,7 @@ tmux_conf_theme_window_status_bell_bg='default'
 tmux_conf_theme_window_status_bell_attr='blink,bold'
 
 # window last status style
-tmux_conf_theme_window_status_last_fg='#164d99'         # green
+tmux_conf_theme_window_status_last_fg='#66adC9'         # light blue
 tmux_conf_theme_window_status_last_bg='#000000'
 tmux_conf_theme_window_status_last_attr='bold'
 
@@ -176,7 +176,7 @@ tmux_conf_theme_status_left_bg='#4f772d,#f1faee,#ffffff'  # green, light gray, w
 tmux_conf_theme_status_left_attr='bold,none,none'
 
 # status right style
-tmux_conf_theme_status_right_fg='#ffffff,#000000,#ffffff' # light gray, black, white
+tmux_conf_theme_status_right_fg='#ffffff,#ffffcc,#ffffff' # light gray, black, white
 #tmux_conf_theme_status_right_bg='#000000,#a8dadc,#164d99' # gray, honeydew, dark blue
 tmux_conf_theme_status_right_bg='#000000,#457b9d,#164d99' # gray, honeydew, dark blue
 tmux_conf_theme_status_right_attr='none,none,bold'
