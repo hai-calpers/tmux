@@ -318,3 +318,4 @@ set -g @resurrect-processes 'ssh'
 
 set allow-rename off
 set -g automatic-rename off
+
