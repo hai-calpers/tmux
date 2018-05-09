@@ -297,6 +297,8 @@ bind -r M-l next-window     # select next window
 # Mark a pane
 bind M select-pane -m
 
+# Repeated next pane
+bind -r o select-pane -t :.+
 # Switch to last session
 bind Space switch-client -l 
 
